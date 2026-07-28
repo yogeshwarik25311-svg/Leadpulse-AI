@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0b0c;
+  --panel: #121214;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+@layer utilities {
+  .bg-app { background-color: #0b0b0c; }
+  .bg-panel { background-color: #121214; }
+  .shadow-glow { box-shadow: 0 0 0 1px rgba(139,92,246,.25), 0 12px 40px -12px rgba(139,92,246,.55); }
+  .ring-violet-soft { box-shadow: 0 0 0 1px rgba(139,92,246,.35); }
+  .scrollbar-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: #27272a; border-radius: 9999px; }
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.animate-fade-up { animation: fadeUp .35s cubic-bezier(.22,1,.36,1) both; }
+
